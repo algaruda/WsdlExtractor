@@ -4,6 +4,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 15.0.26403.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoaWsdlExtractor", "SoaWsdlExtractor\SoaWsdlExtractor.csproj", "{AE28061B-BDD7-4C2D-B57C-2C74B96AD934}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B6AB4AA5-E183-4E42-B336-612A0460BF9A} = {B6AB4AA5-E183-4E42-B336-612A0460BF9A}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WsdlExtractor", "WsdlExtractor\WsdlExtractor.csproj", "{B6AB4AA5-E183-4E42-B336-612A0460BF9A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WsdlChecker", "WsdlChecker\WsdlChecker.csproj", "{EAC80CFB-DC60-4000-BCAB-692B13584A2C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +22,14 @@ Global
 		{AE28061B-BDD7-4C2D-B57C-2C74B96AD934}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AE28061B-BDD7-4C2D-B57C-2C74B96AD934}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AE28061B-BDD7-4C2D-B57C-2C74B96AD934}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6AB4AA5-E183-4E42-B336-612A0460BF9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6AB4AA5-E183-4E42-B336-612A0460BF9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6AB4AA5-E183-4E42-B336-612A0460BF9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6AB4AA5-E183-4E42-B336-612A0460BF9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EAC80CFB-DC60-4000-BCAB-692B13584A2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAC80CFB-DC60-4000-BCAB-692B13584A2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAC80CFB-DC60-4000-BCAB-692B13584A2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAC80CFB-DC60-4000-BCAB-692B13584A2C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

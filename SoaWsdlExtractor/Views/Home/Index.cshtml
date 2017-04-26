@@ -1,31 +1,84 @@
-﻿@{
+﻿@using WsdlExtractor;
+@model SchemaRequest
+@{
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
+<div class="container">
+    @using (Html.BeginForm("Inspect", "Home", FormMethod.Post))
+    {
+        <div class="row">
+            <div class="col-md-10">
+                <input type="text" name="url" class="form-control input-lg fullsizeinput" placeholder="SOA URL">
+            </div>
+
+            <div class="col-md-2">
+                <input type="submit" class="btn btn-lg btn-primary" value="Go">
+            </div>
+        </div>
+    }
+
+
+    <p>
+        @if (Model == null)
+        {
+            <div>
+                &nbsp; &nbsp; &nbsp;
+                Select URL
+            </div>
+        }
+        else
+        {
+                if(Model != null)
+                {
+                    foreach(var item in Model.XsdUrls)
+                    {
+                        <div>
+                            &nbsp; &nbsp; &nbsp;
+                            @item;
+                        </div>
+                    }
+                }
+        }
+    </p>
+    <p>&nbsp;</p>
+
+    @if (Model != null)
+    {
+        if(Model.Types.Count == 0)
+        {
+            <div>Empty result</div>
+        }
+
+        foreach (var item in Model?.Types?.Keys)
+        {
+            <h3>@item</h3>
+            <table border="1" class="table table-responsive">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Nullable</th>
+                        <th>Min occurs</th>
+                        <th>Source</th>
+                    </tr>
+                </thead>
+                @foreach (var sub in Model.Types[item])
+                {
+                    <tr>
+                        <td>@sub.Name</td>
+                        <td>@sub.Type</td>
+                        <td>@sub.Nullable</td>
+                        <td>@sub.MinOccurs</td>
+                        <td>@sub.TypeLib</td>
+                    </tr>
+                }
+            </table>
+
+        }
+    }
+
+    <p>&nbsp;</p>
+    <div class="text-center" style="font-size:32px;">&#9996;</div>
 </div>
