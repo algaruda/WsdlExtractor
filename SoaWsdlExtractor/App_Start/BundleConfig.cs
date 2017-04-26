@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Optimization;
 
-namespace SoaWsdlExtractor
+namespace WsdlExtractor.Web
 {
     public class BundleConfig
     {

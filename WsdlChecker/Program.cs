@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using WsdlExtractor;
 
-namespace WsdlChecker
+namespace WsdlExtractor.Test
 {
     /// <summary>
     /// Simple testing app for WsdlExtractor
