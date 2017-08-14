@@ -3,19 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26403.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WsdlExtractor.Web", "SoaWsdlExtractor\WsdlExtractor.Web.csproj", "{AE28061B-BDD7-4C2D-B57C-2C74B96AD934}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoaWsdlExtractor", "SoaWsdlExtractor\SoaWsdlExtractor.csproj", "{AE28061B-BDD7-4C2D-B57C-2C74B96AD934}"
 	ProjectSection(ProjectDependencies) = postProject
 		{B6AB4AA5-E183-4E42-B336-612A0460BF9A} = {B6AB4AA5-E183-4E42-B336-612A0460BF9A}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WsdlExtractor.Core", "WsdlExtractor\WsdlExtractor.Core.csproj", "{B6AB4AA5-E183-4E42-B336-612A0460BF9A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WsdlExtractor", "WsdlExtractor\WsdlExtractor.csproj", "{B6AB4AA5-E183-4E42-B336-612A0460BF9A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WsdlExtractor.Test", "WsdlChecker\WsdlExtractor.Test.csproj", "{EAC80CFB-DC60-4000-BCAB-692B13584A2C}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C39C74D9-8213-4209-A970-DCDC3781BB0D}"
-	ProjectSection(SolutionItems) = preProject
-		README.md = README.md
-	EndProjectSection
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WsdlChecker", "WsdlChecker\WsdlChecker.csproj", "{EAC80CFB-DC60-4000-BCAB-692B13584A2C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

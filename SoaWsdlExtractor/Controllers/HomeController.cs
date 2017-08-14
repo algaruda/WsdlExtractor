@@ -6,7 +6,7 @@ using System.Web.Mvc;
 using System.IO;
 using WsdlExtractor;
 
-namespace WsdlExtractor.Web.Controllers
+namespace SoaWsdlExtractor.Controllers
 {
     public class HomeController : Controller
     {

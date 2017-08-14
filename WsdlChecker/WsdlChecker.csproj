@@ -7,7 +7,7 @@
     <ProjectGuid>{EAC80CFB-DC60-4000-BCAB-692B13584A2C}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>WsdlChecker</RootNamespace>
-    <AssemblyName>WsdlExtractor.Test</AssemblyName>
+    <AssemblyName>WsdlChecker</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -50,9 +50,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WsdlExtractor\WsdlExtractor.Core.csproj">
+    <ProjectReference Include="..\WsdlExtractor\WsdlExtractor.csproj">
       <Project>{b6ab4aa5-e183-4e42-b336-612a0460bf9a}</Project>
-      <Name>WsdlExtractor.Core</Name>
+      <Name>WsdlExtractor</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
